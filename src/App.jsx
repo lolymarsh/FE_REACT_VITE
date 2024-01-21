@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ContainerComponent from "./Components/ContainerComponent";
+import H2Component from "./Components/H2Component";
+import PComponent from "./Components/PComponent";
+import ResumeComponent from "./Components/ResumeComponent";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ContainerComponent>
+      <div className="container">
+        <ResumeComponent text="Resume" />
+        <H2Component text="นายภูวดล ทนค้ำ" />
+        <PComponent text="สีที่ชอบ สีเขียว" />
+        <PComponent text="ความสูง 175 ซม." />
+        <PComponent text="น้ำหนัก 60 กก." />
+        <PComponent text="คำคมที่ชอบ ความสุขไม่ได้มาจากการมีสิ่งของมากมาย แต่มาจากการรับรู้และดีใจกับสิ่งที่มี" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </ContainerComponent>
+  );
+};
 
-export default App
+export default App;
